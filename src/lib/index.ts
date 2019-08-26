@@ -77,11 +77,16 @@ class ServerlessIamPerFunctionPlugin {
     if(!_.isArray(fnJoin) || fnJoin.length !== 2 || !_.isArray(fnJoin[1]) || fnJoin[1].length < 2) {
       this.throwError("Global Role Name is not in exepcted format. Got name: " + JSON.stringify(roleName));
     }
-    fnJoin[1].splice(2, 0, functionName); //insert the function name
-    if(this.getRoleNameLength(fnJoin[1]) > 64 && fnJoin[1][fnJoin[1].length-1] === 'lambdaRole') {
-      // Remove lambdaRole from name to give more space for function name.
-      fnJoin[1].pop();
-    }
+
+    fnJoin[1].pop(); // remove lambdaRole
+    fnJoin[1].pop(); // remove region
+    fnJoin[1][0].slice(9) // remove 'loanwell-'
+
+    // fnJoin[1].splice(2, 0, functionName); //insert the function name
+    // if(this.getRoleNameLength(fnJoin[1]) > 64 && fnJoin[1][fnJoin[1].length-1] === 'lambdaRole') {
+    //   // Remove lambdaRole from name to give more space for function name.
+    //   fnJoin[1].pop();
+    // }
     if(this.getRoleNameLength(fnJoin[1]) > 64) { //aws limits to 64 chars the role name
       this.throwError(`auto generated role name for function: ${functionName} is too long (over 64 chars).
         Try setting a custom role name using the property: iamRoleStatementsName.`);
