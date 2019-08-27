@@ -69,7 +69,7 @@ class ServerlessIamPerFunctionPlugin {
         }
         if (fnJoin[1][0].endsWith('-service')) {
             // Remove -service from service name.
-            fnJoin[1][0] = fnJoin[1][0].slice(-8);
+            fnJoin[1][0] = fnJoin[1][0].slice(0, -8);
         }
         if (fnJoin[1][fnJoin[1].length - 1] === 'lambdaRole') {
             // Remove lambdaRole from name to give more space for function name.
