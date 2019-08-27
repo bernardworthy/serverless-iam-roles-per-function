@@ -78,7 +78,15 @@ class ServerlessIamPerFunctionPlugin {
       this.throwError("Global Role Name is not in exepcted format. Got name: " + JSON.stringify(roleName));
     }
     fnJoin[1].splice(2, 0, functionName); //insert the function name
-    if(this.getRoleNameLength(fnJoin[1]) > 64 && fnJoin[1][fnJoin[1].length-1] === 'lambdaRole') {
+    if(fnJoin[1][0].startsWith('loanwell-')) {
+      // Remove loanwell- from service name.
+      fnJoin[1][0].slice(9);
+    }
+    if(fnJoin[1][0].endsWith('-service')) {
+      // Remove -service from service name.
+      fnJoin[1][0].slice(-8);
+    }
+    if(fnJoin[1][fnJoin[1].length-1] === 'lambdaRole') {
       // Remove lambdaRole from name to give more space for function name.
       fnJoin[1].pop();
     }
