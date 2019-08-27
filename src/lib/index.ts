@@ -80,11 +80,11 @@ class ServerlessIamPerFunctionPlugin {
     fnJoin[1].splice(2, 0, functionName); //insert the function name
     if(fnJoin[1][0].startsWith('loanwell-')) {
       // Remove loanwell- from service name.
-      fnJoin[1][0].slice(9);
+      fnJoin[1][0] = fnJoin[1][0].slice(9);
     }
     if(fnJoin[1][0].endsWith('-service')) {
       // Remove -service from service name.
-      fnJoin[1][0].slice(-8);
+      fnJoin[1][0] = fnJoin[1][0].slice(-8);
     }
     if(fnJoin[1][fnJoin[1].length-1] === 'lambdaRole') {
       // Remove lambdaRole from name to give more space for function name.
