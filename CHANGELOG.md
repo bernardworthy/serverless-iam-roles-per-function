@@ -1,26 +1,55 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
-<a name="2.0.5"></a>
-## [2.0.5](https://github.com/functionalone/serverless-iam-roles-per-function/compare/v2.0.4...v2.0.5) (2019-08-27)
+## [3.2.0](https://github.com/functionalone/serverless-iam-roles-per-function/compare/v3.1.1...v3.2.0) (2021-03-19)
 
 
+### Features
 
-<a name="2.0.4"></a>
-## [2.0.4](https://github.com/functionalone/serverless-iam-roles-per-function/compare/v2.0.3...v2.0.4) (2019-08-27)
+* Support new provider.iam property ([0d3dd37](https://github.com/functionalone/serverless-iam-roles-per-function/commit/0d3dd37328b283cafc92f42dbc16ed37a6ecd7b2)), closes [#73](https://github.com/functionalone/serverless-iam-roles-per-function/issues/73)
 
-
-
-<a name="2.0.3"></a>
-## [2.0.3](https://github.com/functionalone/serverless-iam-roles-per-function/compare/v2.0.1...v2.0.3) (2019-08-27)
+### [3.1.1](https://github.com/functionalone/serverless-iam-roles-per-function/compare/v3.1.0...v3.1.1) (2021-01-03)
 
 
+### Bug Fixes
 
-<a name="2.0.2"></a>
-## [2.0.2](https://github.com/functionalone/serverless-iam-roles-per-function/compare/v2.0.1...v2.0.2) (2019-08-27)
+* change PermissionsBoundary feature to add suport for cloudformation functions ([PR#70](https://github.com/functionalone/serverless-iam-roles-per-function/pull/70))
+
+## [3.1.0](https://github.com/functionalone/serverless-iam-roles-per-function/compare/v3.0.2...v3.1.0) (2020-12-17)
 
 
+### Features
+
+* Permission boundary ([PR#68](https://github.com/functionalone/serverless-iam-roles-per-function/pull/68))
+
+## [3.0.2](https://github.com/functionalone/serverless-iam-roles-per-function/compare/v3.0.1...v3.0.2) (2020-12-04)
+
+### Bug Fixes
+Add `logs:CreateLogGroup` action to default policy ([#42](https://github.com/functionalone/serverless-iam-roles-per-function/issues/42)) ([b5e1837](https://github.com/functionalone/serverless-iam-roles-per-function/commit/b5e1837))
+## [3.0.1](https://github.com/functionalone/serverless-iam-roles-per-function/compare/v3.0.0...v3.0.1) (2020-11-28)
+
+
+### Features
+
+* Docs: added contributing section ([d9715ba](https://github.com/functionalone/serverless-iam-roles-per-function/commit/d9715ba))
+
+## [3.0.0](https://github.com/functionalone/serverless-iam-roles-per-function/compare/v2.0.2...v3.0.0) (2020-11-02)
+
+### Bug Fixes
+* Function properties schema validation fixe ([#63](https://github.com/functionalone/serverless-iam-roles-per-function/issues/63)) ([1f81264](https://github.com/functionalone/serverless-iam-roles-per-function/commit/1f81264))
+
+### Features
+* Support for Serverless v2.5.0 ([#53](https://github.com/functionalone/serverless-iam-roles-per-function/issues/53)) ([09e56ae](https://github.com/functionalone/serverless-iam-roles-per-function/commit/09e56ae))
+* nodejs 12 support ([#32](https://github.com/functionalone/serverless-iam-roles-per-function/issues/32)) ([4dd58a2](https://github.com/functionalone/serverless-iam-roles-per-function/commit/4dd58a2))
+* Use resolved region name in counting length of role name ([#33](https://github.com/functionalone/serverless-iam-roles-per-function/issues/33)) ([f9fd677](https://github.com/functionalone/serverless-iam-roles-per-function/commit/f9fd677)), closes [#26](https://github.com/functionalone/serverless-iam-roles-per-function/issues/26)
+
+## [2.0.2](https://github.com/functionalone/serverless-iam-roles-per-function/compare/v2.0.1...v2.0.2) (2019-08-30)
+
+
+### Features
+
+* update dependencies ([61c04e7](https://github.com/functionalone/serverless-iam-roles-per-function/commit/61c04e7))
 
 <a name="2.0.1"></a>
 ## [2.0.1](https://github.com/functionalone/serverless-iam-roles-per-function/compare/v2.0.0...v2.0.1) (2019-05-10)
@@ -31,7 +60,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 <a name="2.0.0"></a>
-# [2.0.0](https://github.com/functionalone/serverless-iam-roles-per-function/compare/v1.0.4...v2.0.0) (2019-04-30)
+## [2.0.0](https://github.com/functionalone/serverless-iam-roles-per-function/compare/v1.0.4...v2.0.0) (2019-04-30)
 
 
 ### Features
@@ -82,7 +111,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 
 <a name="1.0.0"></a>
-# [1.0.0](https://github.com/functionalone/serverless-iam-roles-per-function/compare/v0.1.9...v1.0.0) (2018-05-29)
+## [1.0.0](https://github.com/functionalone/serverless-iam-roles-per-function/compare/v0.1.9...v1.0.0) (2018-05-29)
 
 
 ### Bug Fixes
